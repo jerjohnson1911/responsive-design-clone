@@ -64,41 +64,126 @@ header{
   display: none;
 }
 
-.menu-btn img{
-  width: 20px;
+.filler{
+  
+  color: aliceblue;
+  position: absolute;
+  top: 275px;
+  text-align: center;
+}
 
+h1{
+  font-size: 80px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+h2{
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.middle-btn{
+  margin-top: 50px;
+  height: 75px;
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: goldenrod;
+  border-radius: 8px;
+  border: none;
+  color: aliceblue;
 }
 
 @media screen and (max-width: 1000px) {
   .nav-div-outer{
-    width: 999px;
-    height: 80px;
+    width: 100vw;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #131212b7;
-  
+    
+    text-transform: uppercase;
+    background-color: #292626;
+    /* transition: all .3s; */
   }
   
   .nav-links{
-    color: aliceblue;
-    display: flex;
-    width: 500px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    transform: translate(-335px, 120px);
-align-items: flex-start;
-    text-transform: uppercase;
-    z-index: -1;
+    display: none;
   }
   
   
   .menu-btn{
-    display: initial;
+    color:aliceblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-right: 100px;
+    width: 90px;
+    height: 40px;
+    background-color: goldenrod;
+    border: 0;
+    border-radius: 5px;
+    padding: 0 12px 0 12px;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+  }
+
+  .menu-btn img{
+    width: 18px;
+    margin-left: 10px;
+  }
+
+  .nav-logo{
+    width: 140px;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+  }
+
+  .drop{
+    width: 100vw;
+    height: 280px;
+    display: flex;
+    
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .nav-links-down{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    position: absolute;
+    top: 75px;
+    left: 100px;
+    transition-delay: .4s;
+    font-size: 18px;
+    line-height: 2.2;
+  }
+
+  .show{
+    display: initial;
+    transition-delay: .4s;
   }
 
 }
 
 
+@media screen and (max-width: 767px) {
+
+  .menu-btn img{
+    width: 18px;
+    margin-left: 10px;
+  }
+
+  .nav-logo{
+    width: 140px;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+  }
+
+
+}

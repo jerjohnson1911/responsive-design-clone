@@ -10,23 +10,21 @@ class Header extends Component {
     }
 
     toggleShowFunc = () => {
-        this.setState(prevstate => {
+        this.setState( (prevState) => {
             return {
-                toggleShow: !prevstate.toggleShow
+                toggleShow: !prevState.toggleShow
             }
-        }
-
-        )
+        })
     }
-
+            
     render() {
         return <header>
-            <div className='nav-div-outer'>
+            <div className={`nav-div-outer ${this.state.toggleShow ? "drop" : ""}`}>
                 <div className='nav-div-inner'>
                     <img className='nav-logo'
                         src='https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg' />
 
-                    <nav className={`nav-bar ${this.state.toggleShow ? "hide" : ""}`}>
+                    <nav className='nav-bar'>
                         <ul className='nav-links'>
                             <li>
                                 <a>services</a>
@@ -48,8 +46,8 @@ class Header extends Component {
                     </nav>
 
                     <button className='menu-btn' onClick={this.toggleShowFunc}>Menu <img src={hamburger} /></button>
-
-                    <nav className='nav-hidden'>
+                        
+                    <nav className={`nav-hidden ${this.state.toggleShow ? "show" : ""}`}>
                         <ul className='nav-links-down'>
                             <li>
                                 <a>services</a>
@@ -70,6 +68,13 @@ class Header extends Component {
                     </nav>
 
                 </div>
+            </div>
+
+
+            <div className='filler'>
+                <h2>welcome to your studio!</h2>
+                <h1>it's nice to meet you</h1>
+                <button className='middle-btn'>tell me more</button>
             </div>
 
         </header>
